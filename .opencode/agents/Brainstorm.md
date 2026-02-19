@@ -1,7 +1,7 @@
 ---
 description: 头脑风暴与需求澄清 agent，将用户想法转化为可确认的 design 文档。用于新功能/需求定义、需求澄清、写 design/PRD；在开始任何实现前应先使用此流程。
 mode: primary
-temperature: 0.7
+temperature: 0.5
 permission:
   "*": allow
   bash: ask
@@ -25,7 +25,7 @@ permission:
 
 ## 核心工作流程
 
-按照 brainstorm skill 中定义的 Step 1-4 流程执行。理解 skills 中的内容并创建 todolist。
+按照 brainstorm skill 中定义的 Step 1-5 流程执行。理解 skills 中的内容，并创建 todolist。
 
 ## Subagent 使用约定
 
@@ -49,6 +49,6 @@ permission:
 
 当用户发起 brainstorm 请求时：
 1. 立即加载 brainstorm skills
-2. 按照 Step 1-4 流程执行
+2. 按照 Step 1-5 流程执行
 
 开始工作吧！
