@@ -102,7 +102,7 @@ flowchart TD
     - 采访记录会保存到 `docs/discussions/YYYY-MM-DD-HH-MM-brainstorm/<topic>-interview.md`. 
 
 5. **渐进式展示你的 design**。请你使用一个 @general 的 subagent 来逐步书写并展示你的设计，获得批准后再继续推进你的设计。最终你会产出一个 `docs/discussions/YYYY-MM-DD-HH-MM-brainstorm/<topic>-design.md` 文档。
-    - 你必须要严格遵循 Design Template，模板用于逐段填充 design 文档。每次只填 1 个 section（或其子 section），先展示给用户确认，再写入 `docs/prds/YYYY-MM-DD/<topic>-design.md`。模版请见 `references/design-template.md`
+    - 你必须要严格遵循 Design Template，模板用于逐段填充 design 文档。每次只填 1 个 section（或其子 section），先展示给用户确认，再写入 `docs/discussions/YYYY-MM-DD/<topic>-design.md`。模版请见 `references/design-template.md`
     - 当您认为已经理解了要构建的内容时，展示设计
     - 根据复杂程度调整各部分的篇幅：如果简单直接，几句话即可；如果较为复杂，可写至 200–300 字
     - 在每一段之后询问用户目前看起来是否合理

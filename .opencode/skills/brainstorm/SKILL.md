@@ -104,11 +104,11 @@ flowchart TD
 请参考 `references/brainstorm-interview.md` 中的内容对用户进行访谈。
 
 ### Step 5: 确保产出被正确保存
-Step 4 最终会产出一个 design。会保存在 `docs/prds/YYYY-MM-DD/<topic>-design.md`
+
+Step 4 最终会产出一个 design。会保存在 `docs/discussions/YYYY-MM-DD/<topic>-design.md`
 
 作为一个记录的结果，同时会将 interview 的内容保存为采访记录：`docs/discussions/YYYY-MM-DD-HH-MM-brainstorm/<topic>-interview.md`
 
-请注意他们被保存到了不同的文件夹中。
 
 ## 完成产出之后
 
