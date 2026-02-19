@@ -14,9 +14,9 @@ topic: <topic>
 date: <YYYY-MM-DD>
 status: draft # draft|approved
 source:
-  initial: docs/discussions/<YYYY-MM-DD-HH-MM-SS-brainstorm>/initial.md
-  research: docs/discussions/<YYYY-MM-DD-HH-MM-SS-brainstorm>/research.md
-  interview: docs/discussions/<YYYY-MM-DD-HH-MM-SS-brainstorm>/<topic>-interview.md
+  initial: docs/discussions/<YYYY-MM-DD-HH-MM-brainstorm>/initial.md
+  research: docs/discussions/<YYYY-MM-DD-HH-MM-brainstorm>/research.md
+  interview: docs/discussions/<YYYY-MM-DD-HH-MM-brainstorm>/<topic>-interview.md
 ---
 
 ## 1. 一句话总结

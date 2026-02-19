@@ -21,7 +21,7 @@ design 是书写 prd 的前序材料。design 并不是技术设计，而是产�
 
 采访的输入应该是
 - 根据 Step 1 和 Step 3 的结果进行访谈。
-- 如果无法获得 Step 1 和 Step 3 的内容（例如可能上下文被压缩过），那么请参考 `docs/discussions/YYYY-MM-DD-HH-MM-SS-brainstorm/initial.md` 和  `docs/discussions/YYYY-MM-DD-HH-MM-SS-brainstorm/research.md` 作为输入内容。
+- 如果无法获得 Step 1 和 Step 3 的内容（例如可能上下文被压缩过），那么请参考 `docs/discussions/YYYY-MM-DD-HH-MM-brainstorm/initial.md` 和  `docs/discussions/YYYY-MM-DD-HH-MM-brainstorm/research.md` 作为输入内容。
 
 如果已经进行过 research，使用它来：
 - 跳过那些可以被 research 解答的问题。
@@ -49,21 +49,29 @@ design 是书写 prd 的前序材料。design 并不是技术设计，而是产�
 
 ```mermaid
 flowchart TD
-    A[Explore context]
-    B[Ask clarifying questions]
-    C[Propose 2-3 approaches]
-    D{More questions to clarify?}
-    E[Progressively present the design]
-    F[Progressively confirm your deisgn with user and save]
-    G[[Save the design and interview]]
+    A["查看上下文<br/>(initial.md / research.md)"]
+    B["提出澄清问题<br/>(一次一个；优先多选)"]
+    C["提出 2-3 种方案<br/>(含 trade-off + 推荐)"]
+    D{还有需要澄清的吗？}
+    E["保存 interview 记录<br/>(docs/discussions/.../&lt;topic&gt;-interview.md)"]
+    F["展示下一段 design<br/>(遵循 design template)"]
+    G{用户确认这一段吗？}
+    R[修改这一段]
+    H{还有下一段吗？}
+    I["保存最终 design<br/>(docs/discussions/.../&lt;topic&gt;-design.md)"]
+    J([完成])
 
     A --> B
     B --> C
     C --> D
-    D -- "yes" --> B
-    D -- "no" -->  E
+    D -- "是" --> B
+    D -- "否" --> E
     E --> F
     F --> G
+    G -- "否" --> R --> F
+    G -- "是" --> H
+    H -- "是" --> F
+    H -- "否" --> I --> J
 ```
 
 
@@ -88,23 +96,18 @@ flowchart TD
 
 3. **反思是否有更多的需要澄清的内容**。如果有，那么需要重新提出问题。
 
-4. **渐进式展示你的 design**。逐步书写并展示你的设计，获得批准后再继续推进你的设计。最终你会产出一个 `docs/discussions/YYYY-MM-DD-HH-MM-SS-brainstorm/<topic>-design.md` 文档。
+4. **保存 interview 结果**。当你没有更多问题要问时，将你刚刚的提问和用户的回答都保存下来。
+    - 请你使用一个 @general 的 subagent 来保存将你刚刚的提问和用户的回答。
+    - 不要进行任何形式的总结，要忠实地记录当时的对话。
+    - 采访记录会保存到 `docs/discussions/YYYY-MM-DD-HH-MM-brainstorm/<topic>-interview.md`. 
+
+5. **渐进式展示你的 design**。请你使用一个 @general 的 subagent 来逐步书写并展示你的设计，获得批准后再继续推进你的设计。最终你会产出一个 `docs/discussions/YYYY-MM-DD-HH-MM-brainstorm/<topic>-design.md` 文档。
+    - 你必须要严格遵循 Design Template，模板用于逐段填充 design 文档。每次只填 1 个 section（或其子 section），先展示给用户确认，再写入 `docs/prds/YYYY-MM-DD/<topic>-design.md`。模版请见 `references/design-template.md`
     - 当您认为已经理解了要构建的内容时，展示设计
     - 根据复杂程度调整各部分的篇幅：如果简单直接，几句话即可；如果较为复杂，可写至 200–300 字
     - 在每一段之后询问用户目前看起来是否合理
     - 如果某些内容不清晰，随时准备返回并澄清
-    - 当用户认可某一段之后，将设计保存到 `docs/discussions/YYYY-MM-DD-HH-MM-SS-brainstorm/<topic>-design.md` 中.
+    - 当用户认可某一段之后，将设计保存到 `docs/discussions/YYYY-MM-DD-HH-MM-brainstorm/<topic>-design.md` 中.
     - 注意，由于是渐进式地展示设计，你需要逐段地给用户展示并书写你的 design 文档。
 
 **注意：为不熟悉背景的读者撰写**。Design 文档必须完全自成体系——一个没有任何先验知识的工程师、项目经理或 LLM 应该仅通过阅读该文档就能理解我们要构建什么、为什么构建以及如何构建。
-
-5. **保存 interview**。
-    - 采访记录会保存到 `docs/discussions/YYYY-MM-DD-HH-MM-SS-brainstorm/<topic>-interview.json`. 在这一步中，你需要通过 cli 来保存指令 `opencode export [sessionID]`，并将内容复制到目的地文件夹中。
-    - 你可以使用 `opencode session list 2>/dev/null | head -20` 来尝试判断当前的对话是哪个 session。
-    - 当你需要更多信息的时候你可以查阅：https://opencode.ai/docs/cli/#export
-
-## Design Template
-
-模板用于逐段填充 design 文档。每次只填 1 个 section（或其子 section），先展示给用户确认，再写入 `docs/prds/YYYY-MM-DD/<topic>-design.md`。
-
-模版请见 `references/design-template.md`

@@ -49,10 +49,10 @@ flowchart TD
 ### Step 1: 检查 brainstorm 的设置
 
 1. 检查项目目录下是否有 discussions 这个文件夹，如果没有则创建一个。
-2. 在这个文件夹中创建 YYYY-MM-DD-HH-MM-SS-brainstorm 的文件夹。
-3. 记录用户最初输入的内容，并将其记录在 `docs/discussions/YYYY-MM-DD-HH-MM-SS-brainstorm/initial.md`
+2. 在这个文件夹中创建 YYYY-MM-DD-HH-MM-brainstorm 的文件夹。
+3. 记录用户最初输入的内容，并将其记录在 `docs/discussions/YYYY-MM-DD-HH-MM-brainstorm/initial.md`
 
-**重要**：这里的 `YYYY-MM-DD-HH-MM-SS-brainstorm` 就是这次 brainstorm 的文件夹，所有的内容都会放在这里。
+**重要**：这里的 `YYYY-MM-DD-HH-MM-brainstorm` 就是这次 brainstorm 的文件夹，所有的内容都会放在这里。
 
 ### Step 2: research 前的准备
 
@@ -74,7 +74,7 @@ flowchart TD
 ```
 用户可以输入单个选项，或者多个选项。或者自己输入参考的网站。 
 
-3. 整理你得到的回答记录。请记录在 `docs/discussions/YYYY-MM-DD-HH-MM-SS-brainstorm/research-topics.md` 中。
+3. 整理你得到的回答记录。请记录在 `docs/discussions/YYYY-MM-DD-HH-MM-brainstorm/research-topics.md` 中。
 
 ### Step 3: research
 
@@ -93,7 +93,7 @@ flowchart TD
    使用一个 websearch subagent 来进行互联网搜索。你的最终目的是为了在 research.md 中书写 `Best Practice Findings` 的内容。
 
 4. 你应当已经使用了使用 subagent 并行执行这前两个研究步骤。并等待这两个 subagent 结束。
-5. 使用一个 doc-writer subagent 来输出 research 的报告到 `docs/discussions/YYYY-MM-DD-HH-MM-SS-brainstorm/research.md` 中。research 的格式详见：`references/research-template.md`。
+5. 使用一个 doc-writer subagent 来输出 research 的报告到 `docs/discussions/YYYY-MM-DD-HH-MM-brainstorm/research.md` 中。research 的格式详见：`references/research-template.md`。
 
 **原则**
 - 获取相关文档页面，收集关键事实（API、限制、最佳实践、版本说明）
@@ -105,9 +105,13 @@ flowchart TD
 
 最终会产出一个 design。会保存在 `docs/prds/YYYY-MM-DD/<topic>-design.md`
 
-作为一个记录的结果，同时会将 interview 的内容保存为采访记录：`docs/discussions/YYYY-MM-DD-HH-MM-SS-brainstorm/<topic>-interview.md`
+作为一个记录的结果，同时会将 interview 的内容保存为采访记录：`docs/discussions/YYYY-MM-DD-HH-MM-brainstorm/<topic>-interview.md`
 
+## 完成产出之后
 
+恭喜用户完成了头脑风暴任务。并总结自己的本次的工作内容。
+
+重要：不要询问用户是否要开始实施，等待用户的指令。
 
 
 

@@ -1,6 +1,6 @@
 # Research Template
 
-这个模板用于 brainstorm workflow 的 Step 3（research 阶段），指导 doc-writer subagent 整合项目内探索和互联网研究的发现，产出 `docs/discussions/YYYY-MM-DD-HH-MM-SS-brainstorm/research.md`。
+这个模板用于 brainstorm workflow 的 Step 3（research 阶段），指导 doc-writer subagent 整合项目内探索和互联网研究的发现，产出 `docs/discussions/YYYY-MM-DD-HH-MM-brainstorm/research.md`。
 
 ## 使用说明
 
@@ -19,8 +19,8 @@ research_scope:
   codebase: true/false  # 是否进行了项目内探索
   internet: true/false  # 是否进行了互联网研究
 source:
-  initial: docs/discussions/<YYYY-MM-DD-HH-MM-SS-brainstorm>/initial.md
-  research_topics: docs/discussions/<YYYY-MM-DD-HH-MM-SS-brainstorm>/research-topics.md
+  initial: docs/discussions/<YYYY-MM-DD-HH-MM-brainstorm>/initial.md
+  research_topics: docs/discussions/<YYYY-MM-DD-HH-MM-brainstorm>/research-topics.md
 ---
 
 ## 1. Research Summary（研究摘要）
