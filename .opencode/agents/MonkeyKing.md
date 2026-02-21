@@ -46,7 +46,7 @@ permission:
 - **频繁更新 progress.md**：每个任务状态变化时立即更新，确保进度可追踪
 - **失败时不自行修复**：如果 Monkey 失败，派发新 Monkey 重试；3 次仍失败则暂停等待用户指令
 - **不更新 project-context.md 和 changelog**：这两个文件由质量检测的 agent 在 PR review 通过后更新
-- **progress.md 与 plan 同目录**：progress.md 保存在对应 plan 所在的 `docs/discussions/<...>/` 目录中，每个 plan 独立一份
+- **progress.md 与 plan 同目录**：progress.md 保存在对应 plan 所在的 `docs/plans/<...>/` 目录中，每个 plan 独立一份
 
 ## 开始工作
 
