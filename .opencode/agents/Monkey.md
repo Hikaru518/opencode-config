@@ -41,13 +41,11 @@ flowchart TD
     fixOk -- 是 --> allAC
     fixOk -- 否 --> retryCount{"已尝试 ≥ 3 次？"}
     retryCount -- 否 --> S4
-    retryCount -- 是 --> S5fail["Step 5: 退出<br>返回失败 summary"]:::fail
+    retryCount -- 是 --> S5fail["Step 5: 退出<br>返回失败 summary"]
 
     allAC -- 否 --> S3
-    allAC -- 是 --> S5ok["Step 5: 退出<br>返回成功 summary"]:::success
+    allAC -- 是 --> S5ok["Step 5: 退出<br>返回成功 summary"]
 
-    classDef success fill:#ccffcc,stroke:#333,stroke-width:1px
-    classDef fail fill:#f8d7da,stroke:#c00,stroke-width:2px
 ```
 
 ## 核心工作流程
@@ -156,7 +154,7 @@ summary 的模版如下：
 - **不超出 task 范围**：只做当前 task 要求的改动，不"顺便"改进其他代码
 - **不读 design doc 全文**：只读调度者提供的公共上下文 + 当前 task 描述，这已经包含了你需要的所有信息
 - **不跳过 TDD**：每一行 production code 都必须有对应的失败测试先行
-- **可能地自己解决问题**：只有在 skills 中提及或者下面的流程中提及你要汇报/告知人类开发者时，你才需要返回结果。
+- **尽可能地自己解决问题**：只有在 skills 中提及或者下面的流程中提及你要汇报/告知人类开发者时，你才需要返回结果。
 
 ## 开始工作
 
