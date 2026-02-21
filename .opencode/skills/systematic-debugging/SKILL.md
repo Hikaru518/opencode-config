@@ -195,7 +195,7 @@ flowchart TD
    - 尽可能用自动化测试
    - 如果没有测试框架，用一次性脚本
    - 修复前必须有
-   - 使用 `test-driven-development` skill 编写合格的失败测试
+   - 使用 test-driven-development skill `skill({ name: "test-driven-development" })` 编写合格的失败测试
 
 2. **实施单一修复**
    - 针对已识别的 root cause
