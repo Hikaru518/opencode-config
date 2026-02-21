@@ -29,15 +29,14 @@ flowchart TD
     checkResult -- 失败 --> retryCount{"已尝试 ≥ 3 次？"}
     retryCount -- 否 --> retryDispatch["派发新 @Monkey<br>携带失败总结"]
     retryDispatch --> checkResult
-    retryCount -- 是 --> markFailed["标记 failed<br>暂停，通知用户"]:::warn
+    retryCount -- 是 --> markFailed["标记 failed<br>暂停，通知用户"]
 
     moreTasks -- 是 --> pickTask
-    moreTasks -- 否 --> S5["Step 5: 汇报结果\n询问是否创建 PR"]
+    moreTasks -- 否 --> S5["Step 5: 汇报结果<br>询问是否创建 PR"]
     S5 --> confirmPR{"用户确认？"}
     confirmPR -- 是 --> S6["Step 6: 创建 PR"]
     confirmPR -- 否 --> doneNode(("结束"))
 
-    classDef warn fill:#f8d7da,stroke:#c00,stroke-width:2px
 ```
 
 ## 强制的工作流程
@@ -75,7 +74,7 @@ flowchart TD
 **目的**：创建全局进度文件，记录所有任务的执行状态。
 
 **具体动作**：
-1. 在 `docs/discussions/<...>/` 创建 `progress.md`，格式遵循 `references/progress-template.md`
+1. 在 `docs/plans/<...>/` 创建 `progress.md`，格式遵循 `references/progress-template.md`
 2. 填入：分支名称、plan 名称、任务总数、开始时间
 3. 将所有任务初始状态设为 pending
 

@@ -5,7 +5,7 @@
 ## 文件位置与命名
 
 - **文件名**：`<topic>-tasks.json`
-- **推荐位置**：与 `<topic>-implementation-plan.md` 同目录（通常是 `docs/discussions/<...>/`）
+- **推荐位置**：与 `<topic>-implementation-plan.md` 同目录（通常是 `docs/plans/<...>/`）
 
 ## 顶层结构
 

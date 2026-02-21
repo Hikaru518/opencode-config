@@ -1,6 +1,6 @@
 ---
 name: systematic-debugging
-description: Use when encountering any bug, test failure, or unexpected behavior, before proposing fixes
+description: "遇到任何 bug、测试失败或非预期行为时使用，在提出修复方案之前必须先完成系统化排查。"
 ---
 
 # systematic-debugging
@@ -47,17 +47,17 @@ description: Use when encountering any bug, test failure, or unexpected behavior
 
 ```mermaid
 flowchart TD
-    P1["Phase 1: Root Cause 调查"]:::phase1 --> P2["Phase 2: 模式分析"]:::phase2
-    P2 --> P3["Phase 3: 假设与测试"]:::phase3
+    P1["Phase 1: Root Cause 调查"] --> P2["Phase 2: 模式分析"]
+    P2 --> P3["Phase 3: 假设与测试"]
     P3 --> verifyHyp{"假设成立？"}
-    verifyHyp -- 是 --> P4["Phase 4: 实施修复"]:::phase4
+    verifyHyp -- 是 --> P4["Phase 4: 实施修复"]
     verifyHyp -- 否 --> P3
 
     P4 --> verifyFix{"修复有效？"}
     verifyFix -- 是 --> done((完成))
     verifyFix -- 否 --> countFix{"已尝试 ≥ 3 次？"}
     countFix -- 否 --> P1
-    countFix -- 是 --> archQ["停下来，质疑架构。与 human partner 讨论"]:::warn
+    countFix -- 是 --> archQ["停下来，质疑架构。与 human partner 讨论"]
 
 ```
 
@@ -248,7 +248,7 @@ flowchart TD
 
 **以上所有都意味着：停下来。回到 Phase 1。**
 
-**如果 3+ 次修复失败：** 质疑架构（见 Phase 4 和 Phase 5）
+**如果 3+ 次修复失败：** 质疑架构（见 Phase 4 第 5 步）
 
 ## 常见合理化借口
 

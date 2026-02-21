@@ -1,6 +1,6 @@
 # Design Template
 
-以下模板用于逐段填充 design 文档。每次只填 1 个 section，先展示给用户确认，再写入 `docs/prds/YYYY-MM-DD/<topic>-design.md`
+以下模板用于逐段填充 design 文档。每次只填 1 个 section，先展示给用户确认，再写入 `docs/plans/YYYY-MM-DD-HH-MM/<topic>-design.md`
 
 **使用约束**：
 - section 长度控制：简单问题每节 2–6 行即可；复杂问题每节控制在约 200–300 字。
@@ -14,9 +14,9 @@ topic: <topic>
 date: <YYYY-MM-DD>
 status: draft # draft|approved
 source:
-  initial: docs/discussions/<YYYY-MM-DD-HH-MM-brainstorm>/initial.md
-  research: docs/discussions/<YYYY-MM-DD-HH-MM-brainstorm>/research.md
-  interview: docs/discussions/<YYYY-MM-DD-HH-MM-brainstorm>/<topic>-interview.md
+  initial: docs/plans/<YYYY-MM-DD-HH-MM>/initial.md
+  research: docs/plans/<YYYY-MM-DD-HH-MM>/research.md
+  interview: docs/plans/<YYYY-MM-DD-HH-MM>/<topic>-interview.md
 ---
 
 ## 1. 一句话总结

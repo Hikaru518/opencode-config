@@ -11,6 +11,7 @@ Flaky 测试经常用固定延迟来猜测时序。这会产生竞态条件—�
 ```mermaid
 flowchart TD
     q1{"测试使用了 setTimeout/sleep？"} -- 是 --> q2{"是在测试时序行为？"}
+    q1 -- 否 --> skip["无需处理"]
     q2 -- 是 --> doc["记录为什么需要 timeout"]
     q2 -- 否 --> use["使用基于条件的等待"]
 ```
@@ -73,9 +74,9 @@ async function waitFor<T>(
 }
 ```
 
-在此基础上可以构建领域特定的 helper ，代码示例：
+在此基础上可以构建领域特定的 helper，伪代码示例：
 
-```typescript
+```
 function waitForEvent(source, eventType, timeout):
     return waitFor(
         () => source.getEvents().find(e => e.type == eventType),

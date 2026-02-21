@@ -16,9 +16,9 @@ topic: <topic>
 date: <YYYY-MM-DD>
 status: draft # draft|approved
 source:
-  design: docs/discussions/<YYYY-MM-DD-HH-MM-brainstorm>/<topic>-design.md
-  research: docs/discussions/<YYYY-MM-DD-HH-MM-brainstorm>/research.md
-  interview: docs/discussions/<YYYY-MM-DD-HH-MM-brainstorm>/<topic>-interview.md
+  design: docs/plans/<YYYY-MM-DD-HH-MM>/<topic>-design.md
+  research: docs/plans/<YYYY-MM-DD-HH-MM>/research.md
+  interview: docs/plans/<YYYY-MM-DD-HH-MM>/<topic>-interview.md
 tasks_file: <topic>-tasks.json
 ---
 
@@ -60,6 +60,8 @@ tasks_file: <topic>-tasks.json
 ### 2.5 目录结构
 
 ### 2.6 编码约定
+
+### 2.7 数据流（轻量模式可跳过）
 
 ## 3. 风险与缓解（技术层面）
 

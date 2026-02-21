@@ -1,6 +1,6 @@
 ---
 name: implementation-planning
-description: "将 brainstorm 阶段的 design doc 与 discussion 文档转化为可串行执行的 implementation plan：包含 technical design、细粒度 tasks（每个 task 可由单个 LLM session 完成且可测试）、以及 tasks 的执行顺序与优先级。"
+description: "将 brainstorm 阶段的 design doc 与 plans 文件夹下的文档转化为可串行执行的 implementation plan：包含 technical design、细粒度 tasks（每个 task 可由单个 LLM session 完成且可测试）、以及 tasks 的执行顺序与优先级。"
 ---
 
 # implementation-planning
@@ -36,7 +36,7 @@ flowchart TD
 
 **具体动作**：
 1. 定位本次 planning 的输入：
-   - **优先**：使用用户显式提供的路径，该路径一般会在 `docs/discussions` 文件中，你会在目录中找到 `<topic>-design.md`、`research.md`、`<topic>-interview.md` 等相关文件。
+   - **优先**：使用用户显式提供的路径，该路径一般会在 `docs/plans` 文件中，你会在目录中找到 `<topic>-design.md`、`research.md`、`<topic>-interview.md` 等相关文件。
    - **否则**：询问用户本次 planning 的输入是什么。
 2. 读取这些文件的内容，并整理要点：
    - 项目一句话目标、MVP 范围、关键约束/假设
@@ -113,7 +113,7 @@ flowchart TD
 
 **目的**：把技术设计 + 任务整合为可被人类审阅与机器调度的最终产物。
 
-**输出位置**：默认保存到目录（`docs/discussions/<...>/`），除非用户指定其它目录。
+**输出位置**：默认保存到目录（`docs/plans/<...>/`），除非用户指定其它目录。
 
 **产出文件**：
 1. `<topic>-implementation-plan.md`（纯 Markdown，遵循 `references/implementation-plan-template.md`）

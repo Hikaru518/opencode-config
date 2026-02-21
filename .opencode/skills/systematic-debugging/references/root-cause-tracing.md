@@ -19,14 +19,13 @@ Bug 通常在调用栈深处暴露。你的本能是在错误出现的地方修�
 flowchart TD
     found["找到直接原因"] --> canTrace{"能向上追踪一层？"}
     canTrace -- 是 --> traceBack["反向追踪"]
-    canTrace -- 否 --> neverFix["绝不只修复症状"]:::warn
+    canTrace -- 否 --> neverFix["绝不只修复症状"]
     traceBack --> isSource{"这是源头吗？"}
     isSource -- "否（继续追踪）" --> traceBack
     isSource -- 是 --> fixSource["在源头修复"]
     fixSource --> addValidation["在每一层添加验证"]
     addValidation --> impossible(("Bug 不可能再发生"))
 
-    classDef warn fill:#f8d7da,stroke:#c00,stroke-width:2px
 ```
 
 **绝不只在错误出现的地方修复。** 反向追踪，找到原始触发点。

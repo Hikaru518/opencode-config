@@ -48,23 +48,15 @@ Implement fresh from tests. Period.
 
 ```mermaid
 flowchart TD
-    RED["RED<br/>Write failing test"]:::red --> VERIFY_RED{"Verify fails<br/>correctly"}
-    VERIFY_RED -- Yes --> GREEN["GREEN<br/>Minimal code"]:::green
+    RED["RED<br/>Write failing test"] --> VERIFY_RED{"Verify fails<br/>correctly"}
+    VERIFY_RED -- Yes --> GREEN["GREEN<br/>Minimal code"]
     VERIFY_RED -- "Wrong<br/>failure" --> RED
     GREEN --> VERIFY_GREEN{"Verify passes<br/>All green"}
-    VERIFY_GREEN -- Yes --> REFACTOR["REFACTOR<br/>Clean up"]:::refactor
+    VERIFY_GREEN -- Yes --> REFACTOR["REFACTOR<br/>Clean up"]
     VERIFY_GREEN -- No --> GREEN
     REFACTOR -- "Stay<br/>green" --> VERIFY_GREEN
     VERIFY_GREEN --> NEXT((Next))
     NEXT --> RED
-
-    classDef red fill:#ffcccc,stroke:#333,stroke-width:1px
-    classDef green fill:#ccffcc,stroke:#333,stroke-width:1px
-    classDef refactor fill:#ccccff,stroke:#333,stroke-width:1px
-
-    class RED red
-    class GREEN green
-    class REFACTOR refactor
 ```
 
 
