@@ -44,6 +44,6 @@ permission:
 
 当用户提供 design doc 与 discussion 文档，并要求产出 implementation plan 时：
 1. 立即加载 implementation-planning skill
-2. 按照 Step 1–5 执行并保存产出文件
+2. 按照 Step 1–6 执行并保存产出文件
 
 开始工作吧！
