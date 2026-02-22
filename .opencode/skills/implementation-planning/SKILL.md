@@ -120,21 +120,21 @@ flowchart TD
 
 ```
 问题: "本次 technical design 采用哪种深度？"
-选项 A: 轻量模式（跳过「数据模型」「API/接口设计」「目录结构」两节，必要时仅给出最小约定）
+选项 A: 轻量模式（跳过「数据模型」「API/接口设计」「目录结构」3 节，必要时仅给出最小约定）
 选项 B: 完整模式（输出全部 7 节）
 ```
 
-2. **书写 technical design 文档**。请你使用一个 @general 的 subagent 来逐步书写并展示你的技术设计文档。获得批准后再继续推进你的设计。最终你会产出一个 `docs/plans/<YYYY-MM-DD-HH-MM>/<topic>-technical-design.md` 文档。
+2. **书写 technical design 文档**。书写技术设计文档。获得批准后再继续推进你的设计。最终你会产出一个 `docs/plans/<YYYY-MM-DD-HH-MM>/<topic>-technical-design.md` 文档。
    - 输出格式需要严格遵循 `references/technical-design-template.md` 模版。模版用于逐段填充 technical design 文档。
-   - 每次只填 1 个 section（或其子 section），先展示给用户确认，再写入 `docs/plans/<YYYY-MM-DD-HH-MM>/<topic>-technical-design.md`。
-   - 当你认为某个章节本次不需要填写（或者不适用）时，请先向用户确认。
    - 当您认为已经理解了要构建的内容时，展示设计
-   - 在每一段之后询问用户目前看起来是否合理
    - 如果某些内容不清晰，随时准备返回并澄清
-   - 当用户认可某一段之后，将设计保存到 `docs/plans/<YYYY-MM-DD-HH-MM>/<topic>-technical-design.md` 中.
-   - 注意，由于是渐进式地展示设计，你需要逐段地给用户展示并书写你的 design 文档。
+   - 将设计保存到 `docs/plans/<YYYY-MM-DD-HH-MM>/<topic>-technical-design.md` 中.
 
 **注意**：为不熟悉背景的读者撰写。必须完全自成体系——一个没有任何先验知识的工程师、LLM coding agent 应该仅通过阅读该文档就能理解我们应当如何构建，并可以开始代码工作。
+
+在你完成之后，总结
+1. **本次技术设计文档的要点**，以列表的形式展现给用户。并请用户 review 这些要点。
+2. 展示本次的 technical design 的保存文件路径。
 
 3. **输出 technical design 文档**。当所有的内容都书写完之后，输出一份 technical-design 文档。保存到 `docs/plans/<YYYY-MM-DD-HH-MM>/<topic>-technical-design.md`.
 
