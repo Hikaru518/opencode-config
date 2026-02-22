@@ -1,6 +1,6 @@
 # Implementation Plan Template（实施计划模板）
 
-此模板用于 implementation-planning workflow 的 Step 5，生成 `<topic>-implementation-plan.md`（纯 Markdown，面向人类审阅/ LLM agent 参考的公共上下文）。
+此模板用于 implementation-planning workflow 的 Step 6，生成 `<topic>-implementation-plan.md`（纯 Markdown，面向人类审阅/ LLM agent 参考的公共上下文）。
 
 ## 使用约束
 
@@ -47,35 +47,14 @@ tasks_file: <topic>-tasks.json
 
 ## 2. 技术设计
 
-> 说明：如果采用轻量模式，可跳过 2.3 与 2.4 两节（或仅保留最小约定）。
+### 2.1 设计文件`<path-to-technical-design>.md`
 
-### 2.1 架构概览
+### 2.2 设计要点
 
-### 2.2 技术决策记录（ADR）
-
-### 2.3 数据模型（轻量模式可跳过）
-
-### 2.4 API/接口设计（轻量模式可跳过）
-
-### 2.5 目录结构
-
-### 2.6 编码约定
-
-### 2.7 数据流（轻量模式可跳过）
-
-## 3. 风险与缓解（技术层面）
-
-至少列 3 条：
-
-- **R1**：<风险>
-  - **影响**：<会导致什么后果>
-  - **缓解**：<如何降低风险/如何验证>
-- **R2**：
-  - **影响**：
-  - **缓解**：
-- **R3**：
-  - **影响**：
-  - **缓解**：
+此处用简单的总结说明：
+- 这个 plan 的技术设计是怎么样的
+- 技术方案概要
+- 有哪些重要的决策
 
 ---
 

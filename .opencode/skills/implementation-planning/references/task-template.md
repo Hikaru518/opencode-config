@@ -1,6 +1,6 @@
 # Task Template（任务模板）
 
-以下模板用于 implementation-planning workflow 的 Step 4（任务拆解）。目标是产出可被后续的 agent 解析、可被 LLM coding agent 落地实现的细粒度任务。
+以下模板用于 implementation-planning workflow 的 Step 5（任务拆解）。目标是产出可被后续的 agent 解析、可被 LLM coding agent 落地实现的细粒度任务。
 
 ## 任务粒度标准（必须满足）
 
