@@ -11,6 +11,7 @@ permission:
     "*": deny
     implementation-planning: allow
     writing-clearly-and-concisely: allow
+    json-lint: allow
 ---
 
 # Fox Agent
@@ -22,6 +23,8 @@ permission:
 在开始任何工作前，你必须立即加载 **implementation-planning skill**：`skill({ name: "implementation-planning" })`
 
 写作面向人类阅读的长文档时（例如 implementation-plan.md），可以加载 **writing-clearly-and-concisely**：`skill({ name: "writing-clearly-and-concisely" })`
+
+在生成 JSON 文件后（例如 `<topic>-tasks.json`），必须加载 **json-lint** 进行语法检查：`skill({ name: "json-lint" })`，如有错误请根据错误修正。
 
 ## 核心工作流程
 

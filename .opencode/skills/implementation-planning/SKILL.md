@@ -166,6 +166,8 @@ flowchart TD
 3. **用户确认后**。将任务信息保存为 `<topic>-tasks.json`
 你需要严格遵循 `references/tasks-json-schema.md` 的格式。
 
+4. **json 检查**。在生成 `json` 之后使用 json-lint skill `skill({ name: "json-lint" })` 进行检查，如果有错误请根据错误修正。
+
 ### Step 6: 生成总结文档
 
 **目的**：把技术设计 + 任务整合为可被人类审阅与机器调度的最终产物。
