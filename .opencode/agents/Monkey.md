@@ -7,6 +7,8 @@ permission:
   bash: allow
   websearch: allow
   webfetch: allow
+  "todowrite": "allow"
+  "todoread": "allow"
   lsp: allow
   skill:
     "*": deny
