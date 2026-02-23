@@ -99,7 +99,7 @@ flowchart TD
 - 获取相关文档页面，收集关键事实（API、限制、最佳实践、版本说明）
 - 若参考 URL 不可用，查找官方替代来源并标注不确定性。此时你应当使用 websearch 工具。
 
-### Step 4: 用户访谈 interview
+### Step 4: 参考 `brainstorm-interview.md` 中的内容对用户访谈 interview
 
 请参考 `references/brainstorm-interview.md` 中的内容对用户进行访谈。
 
