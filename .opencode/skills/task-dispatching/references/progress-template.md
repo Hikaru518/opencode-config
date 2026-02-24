@@ -16,6 +16,16 @@ source:
 
 # Progress: <topic>
 
+## 总结
+
+### 完成内容与验收要点
+
+<!-- 列出本次任务实际完成了哪些内容，以及用户验收时需要关注的检查点 -->
+
+### 实现与设计的差异
+
+<!-- 对照 `docs/plans/<YYYY-MM-DD-HH-MM>/<topic>-design.md` 中的原始设计，从 user story 和 user journey 两个维度说明：哪些功能已按设计实现，哪些存在偏差或尚未完成 -->
+
 ## 任务状态
 
 | # | Task ID | 标题 | 状态 | 尝试次数 |
